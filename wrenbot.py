@@ -19,8 +19,8 @@ async def on_message(message):
     if message.author == client.user:
         return
     #Test command.
-    if message.content.startswith('!test'):
-        msg = '{0.author.mention}, this is the test function!'.format(message)
+    if message.content.startswith('!help'):
+        msg = '{0.author.mention}, this bot is designed to auto-reply to any mention of the Overwatch role.'.format(message)
         await client.send_message(message.channel, msg)
     #Autoresponder for pinging Overwatch.
     for value in message.role_mentions:
